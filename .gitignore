@@ -1,0 +1,7 @@
+# Build results
+/target/
+**/*.rs.bk
+*.pdb
+
+# While not at 1.0 I dont care about the lock file
+Cargo.lock

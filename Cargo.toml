@@ -1,0 +1,26 @@
+[package]
+name = "yt"
+version = "0.1.0"
+edition = "2024"
+authors = ["spitefully-positive <121156572+spitefully-positive@users.noreply.github.com>"]
+description = "A Rust application for reading and summarizing youtube transcripts"
+license = "MIT"
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json", "cookies", "rustls-tls"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0"
+clap = { version = "4", features = ["derive"] }
+url = "2.5"
+quick-xml = { version = "0.31", features = ["serialize"] }
+regex = "1.10"
+thiserror = "2.0"
+
+[dev-dependencies]
+tempfile = "3.10"
+
+[[bin]]
+name = "yt"
+path = "src/main.rs"
